@@ -1,0 +1,87 @@
+<h2 style="text-align: center; margin-top: 10px;">Contact Us</h2>
+<section>
+    <div class="section-header">
+        <div class="container">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="contact-info">
+                
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                       <i class="fas fa-home"></i>
+                    </div>
+
+                    <div class="contact-info-content">
+                        <h4>Address</h4>
+                        <p>Building No.09,
+                        Raheja Mindspace IT Park
+                        Hi-tech City.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas-fa-phone"></i>
+                    </div>
+                    
+                <div class="contact-info-content"> 
+                     <h4>Phone</h4>
+                     <p>631+0097856</p>
+                </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                       <i class="fas fa-envelope"></i> 
+                    </div>
+
+                    <div class="contact-info-content">
+                        <h4>Email</h4>
+                        <p>example@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contact-form">
+                    <h2>Send Message</h2>
+                    <div class="input-box">
+                        <input type="text" required="true">
+                        <span>Full Name</span>
+                    </div>
+
+                    <div class="input-box">
+                       <input type="email" required="true"> 
+                       <span>Email</span>
+                    </div>
+                   
+                    <div class="input-box">
+                        <textarea required="true"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+
+                    <div class="input-box">
+                        <!-- <input type="submit" onclick="myFunction" value="Send"> -->
+                        <!-- <button onclick="myFunction()">Send</button> -->
+                         <button (click) = "myFunction()" style="border-radius: 5px;
+                          background-color: #1da9c0; height: 30px; width: 80px;"
+                          routerLink="../home">Send</button> 
+                        <!-- <script>
+                            function myFunction() {
+                                 alert("Hello! I am an alert box!");
+                            } -->
+                        <!-- </script> -->
+                    </div>
+                   
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>

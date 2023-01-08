@@ -1,0 +1,46 @@
+<div class="portal-page">
+<img class="home-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxxu6btyEf5jgzcdI2utPMrYGwh2yhJjp7A&usqp=CAU" alt=""> 
+  <header>
+    <div class="logo">
+      <img class="logo-com" src="https://www.innovasolutions.com/wp-content/uploads/2022/07/Innova-Solutions-formerly-ACS-Solutions.png" alt="">
+    </div>
+    <div class="links">
+      <a class="link" routerLink="/home" >Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="link" routerLink="/joblist" (click)="roleSe()">Find a Job</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="link" routerLink="/aboutus">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <!-- <a class="link" routerLink="./contactus">Contact Us</a>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->
+      <button class="btn" routerLink="/login">Login/Register</button>
+
+    </div>
+  </header>
+  <body>
+    <div class="home">
+       <!-- <img class="home-image" src="https://st4.depositphotos.com/14101486/28582/i/600/depositphotos_285825536-stock-photo-human-resources-crm-and-recruitment.jpg" alt="">  -->
+  
+      <h2 class="home-con">Bulid  Your Future</h2>
+      <p class="home-cons">We are offer job vacancies right now!</p>
+    </div>
+    <div class="dropdown">
+      <select class="role" required (change)="selectRole($event)">
+        <option value="" >--Role</option>
+        <option *ngFor="let item of list" [value]="item">{{item}}</option>
+      </select>
+      <select class="loc" required (change)="selectLocation($event)">
+        <option value="">--Location</option>
+        <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+      </select>
+      <div class="home-btn">
+        <button class="btn-job" routerLink="/joblist" (click)="roleSe()"> Find Jobs</button> 
+      </div>
+    </div>
+    
+   
+    <marquee behavior="scroll" direction="left">
+      <b><i><p style="font-size:30px; color: rgb(62, 70, 70);">--- Hirings are open now {{selectedLocation}} ---</p></i></b>
+    </marquee>
+    </body>
+    <span></span>
+</div>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,16 @@
+
+/* body{
+    background-image: url(https://st4.depositphotos.com/14101486/28582/i/600/depositphotos_285825536-stock-photo-human-resources-crm-and-recruitment.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+} */
+.home-cons{
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 400px;
+    font-style: italic;
+    font-size: 30px;
+}

@@ -1,0 +1,27 @@
+<div class="joblisthome">
+    <!-- <img src="https://www.innovasolutions.com/wp-content/uploads/2022/07/Innova-Solutions-formerly-ACS-Solutions.png" alt=""> -->
+<div type="search" class="search" >
+   
+    <div>
+        <i class="fa-soild fa-serach" style="margin-top: -5px; font-size: 30px; position: absolute;margin-left: 15px;">Search Here:</i>   
+    </div>
+    <input style="position: relative; width: 600px; height: 40px;
+         border-radius: 8px; margin-left: 200px; font-size: 20px; font: 10px;"  placeholder="Search for a Role"
+        [(ngModel)]="searchRole">
+    <div *ngIf="searchRole!= null" (click)="searchRole = null">
+        <i style="position: absolute; margin-left: 800px;margin-top: -48px;font-size: 35px;cursor: pointer;">✕</i>
+    </div>
+</div> 
+<div class="joblistss">
+    <a class="lin" routerLink="../home" routerLinkActive="active">Home</a>
+    <button class="lins" routerLink="../login">Login/Register</button>
+    <div class="joblistss" routerLink="../login" *ngFor="let  joblis of joblists | igxFilter: filterContacts " (mouseover)="highLightRole(joblis)"
+    [ngClass] = "{'highlight' : joblis.ID == selecttrole}">   
+        <span class="roless" >{{joblis.Role}}</span> <br>
+        <span class="idss" >Job Id:{{joblis.ID}}</span>
+        <span class="locationss" >Location:{{joblis.Location}}</span>
+    
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
