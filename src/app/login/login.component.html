@@ -2,14 +2,15 @@
   <h2>Login</h2>
   <form>
     <div class="user-box" required>
-      <input type="text" name="username" ngModel>
+      <input type="text" name="username" required>
       <label>Username</label>
     </div>
     <div class="user-box" required>
-      <input type="password" name="password" ngModel >
+      <input type="password" name="password" required >
       <label>Password</label>
     </div>
-    <a routerLink="/form">Login</a>
+    <a routerLink="/form" style="color: #03e9f4;margin-top: 0px;margin-left: -15px;">Login</a>
   </form>
-  <label>Don't have an account?</label><a style="color: rgb(233, 15, 15);" routerLink="../sign">Signup</a>
+  <a style="color: rgb(233, 15, 15); text-decoration: none;margin-top: 80px;" routerLink="../sign">Signup</a>
+  <a style="color: rgb(233, 15, 15); text-decoration: none; margin-left: 110px;margin-top: 30px;" routerLink="../sign">Forgotten Password?</a>
 </div>

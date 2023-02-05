@@ -7,10 +7,16 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
+  public name:any;
+  public mail:any;
+  public sendbtn:boolean=true;
 
   constructor() { }
 
   ngOnInit(): void {
+    if(this.name!=null&&this.mail!=null){
+      this.sendbtn=false;
+    }
 
     
   }

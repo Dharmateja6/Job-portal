@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IgxListModule,IgxRippleModule,IgxInputGroupModule,
 	IgxButtonGroupModule,IgxFilterModule,IgxIconModule,IgxAvatarModule } from 'igniteui-angular';
 import { AppRoutingModule , routingComponent } from './app-routing.module';
@@ -37,7 +37,8 @@ import { VerifyService } from './verify.service';
     IgxInputGroupModule,
     IgxFilterModule,
     IgxIconModule,
-    IgxAvatarModule
+    IgxAvatarModule,
+    ReactiveFormsModule
   ],
   providers: [JobListService,VerifyService],
   bootstrap: [AppComponent]

@@ -15,24 +15,25 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form [formGroup]="userForm1" >
 
         <label for="firstname">First Name</label>
-        <input type="text" placeholder="Enter First Name" id="firstname">
+        <input type="text" placeholder="Enter First Name" formControlName="FirstName" id="firstname" required >
 
         <label for="secondname">Second Name</label>
-        <input type="text" placeholder="Enter Second Name" id="secondname">
+        <input type="text" placeholder="Enter Second Name" formControlName="LastName" id="secondname"required>
 
-        <label for="mobile">Mobile Number</label>
-        <input type="tel" placeholder=" Phone Number" id="mobile">
+        <label for="mobile">UserName</label>
+        <input type="tel" placeholder=" Phone Number" formControlName="username" formControlName="MobileNumber" id="mobile" required>
 
-        <label for="username">Username</label>
-        <input type="email" placeholder="Email " id="username">
+        <label for="username" >Email</label>
+        <input type="email" placeholder="Email" formControlName="Email" id="username" required >
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" formControlName="password" id="password" required >
 
-        <a routerLink="/login"><button style="background-color:#d87709">Submit</button></a>
+        <button  style="background-color:#d87709" (click)="OnSignUp()">Submit</button><br><br>
+        <a routerLink="/login" style="text-decoration: none; margin-top: 10px; margin-left: -20px; color: dodgerblue; cursor: pointer;"> Back to Login</a>
         <!-- <div class="social">
             <a href=""><i class="fab fa-facebook"></i></a>
             <a href=""><i class="fab fa-twitter"></i> </a>
